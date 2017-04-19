@@ -13,7 +13,7 @@ public class TopPlayersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_top_players);
+        setContentView(R.layout.players_list);
 
         TopPlayers topPlayers = new TopPlayers();
         ArrayList<Players> list = topPlayers.getList();
@@ -24,9 +24,9 @@ public class TopPlayersActivity extends AppCompatActivity {
         listView.setAdapter(playersAdapter);
     }
 
-    public void getMovie(View listItem){
+    public void getPlayers(View listItem){
         Players players = (Players) listItem.getTag();
         Log.d("Player name: ", players.getName());
     }
-    }
 }
+
